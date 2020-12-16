@@ -1,0 +1,27 @@
+spring:
+  datasource:
+    username: root
+    password: lf20000910
+    url: jdbc:mysql://localhost:3306/spring_cache?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    #spring某个版本之后需要加上这句，否则不会自动执行sql文件
+    initialization-mode: always
+    platform: mysql
+    #    schema: classpath:sql/management.sql
+  redis:
+    host: 127.0.0.1
+
+server:
+  port: 8087
+#mybatis:
+#  config-location: classpath:mybatis/mybatis-config.xml
+#  mapper-locations: classpath:mybatis/mapper/*.xml
+#schema:
+#  - classpath: schema.sql
+#开启驼峰命名法
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+
+
+debug: true
